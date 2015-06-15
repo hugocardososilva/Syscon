@@ -17,7 +17,7 @@ import model.Lote;
 @FacesConverter("generic")
 public class GenericConverter implements Converter ,Serializable {
 
-	@Override
+
 	public Object getAsObject(FacesContext context, UIComponent component,
 			String value) {
 		 if(value != null && value.trim().length() > 0) {
@@ -36,7 +36,7 @@ public class GenericConverter implements Converter ,Serializable {
 		
 	}
 
-	@Override
+
 	public String getAsString(FacesContext context, UIComponent component,
 			Object value) {
 		  if (value != null

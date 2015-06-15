@@ -12,7 +12,7 @@ import dao.DAOLote;
 @FacesConverter(forClass= model.Lote.class)
 public class LoteConverter implements Converter {
 
-	@Override
+
 	public Object getAsObject(FacesContext context, UIComponent component,
 			String value) {
 		DAOLote dao = new DAOLote();
@@ -24,13 +24,13 @@ public class LoteConverter implements Converter {
 			lote =dao.find(id);
 			System.out.println("convertendo lote   " + id);
 		} catch (NumberFormatException e) {
-			throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro:", "Tipo de lote inválido"));
+			throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, "Erro:", "Tipo de lote invï¿½lido"));
 		}
 
 		return lote;
 	}
 
-	@Override
+
 	public String getAsString(FacesContext context, UIComponent component,
 			Object value) {
 		if(value== null){
